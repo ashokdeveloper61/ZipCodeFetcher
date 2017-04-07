@@ -29,7 +29,7 @@ function showData(responseData) {
      $("#zipCode").html(responseData.zip);
      $("#city").html(responseData.city);
      $("#country").html(responseData.country);
-     $("#temperature-body").html(responseData.temperature + " &deg;C");
+     $("#temperature-body").html(Math.round( responseData.temperature * 10 ) / 10 + " &deg;C");
      $("#percipitation-body").html(responseData.pressure);
      $("#humidity-body").html(responseData.humidity + "  %");
      $("#windSpeed-body").html(responseData.windSpeed + " km/h");

@@ -20,7 +20,7 @@ class WeatherController {
                if(responseData != null){
                     result.operationStatus = "success"
                     def weatherData= [
-                         temperature: responseData.main.temp,
+                         temperature: responseData.main.temp-273.15,
                          pressure: responseData.main.pressure,
                          humidity: responseData.main.humidity,
                          windSpeed: responseData.wind.speed,
